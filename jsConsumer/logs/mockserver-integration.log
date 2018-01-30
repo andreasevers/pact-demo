@@ -1,0 +1,52 @@
+I, [2018-01-21T16:53:09.718405 #41564]  INFO -- : Cleared interactions before example ""
+I, [2018-01-21T16:53:11.746523 #41564]  INFO -- : Registered expected interaction GET /greetings/awd
+D, [2018-01-21T16:53:11.746780 #41564] DEBUG -- : {
+  "description": "a greeting by awd",
+  "request": {
+    "method": "GET",
+    "path": "/greetings/awd"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "salutation": "Mr.",
+      "name": "awd"
+    }
+  }
+}
+I, [2018-01-21T16:53:11.752700 #41564]  INFO -- : Received request GET /greetings/awd
+D, [2018-01-21T16:53:11.752843 #41564] DEBUG -- : {
+  "path": "/greetings/awd",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Referer": "http://localhost:9876/context.html",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1",
+    "Accept": "*/*",
+    "Cookie": "io=rFl8E1YIhQuDIj3KAAAA",
+    "Connection": "Keep-Alive",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept-Language": "en-US,*",
+    "Host": "localhost:1234",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2018-01-21T16:53:11.753012 #41564]  INFO -- : Found matching response for GET /greetings/awd
+D, [2018-01-21T16:53:11.753087 #41564] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "salutation": "Mr.",
+    "name": "awd"
+  }
+}
+I, [2018-01-21T16:53:11.760525 #41564]  INFO -- : Verifying - interactions matched for example ""
+I, [2018-01-21T16:53:11.764200 #41564]  INFO -- : Cleared interactions before example ""
+I, [2018-01-21T16:53:11.769114 #41564]  INFO -- : Writing pact with details {:consumer=>{:name=>"JS Consumer"}, :provider=>{:name=>"provider1"}, :pactfile_write_mode=>"overwrite"}
+I, [2018-01-21T16:53:11.769217 #41564]  INFO -- : Writing pact for provider1 to /Users/andreasevers/repos/pact-demo-shavo007/jsConsumer/pacts/js_consumer-provider1.json
+I, [2018-01-21T16:53:11.773593 #41564]  INFO -- : Cleared interactions before example ""

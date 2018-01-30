@@ -1,0 +1,28 @@
+{
+    "consumer": {
+        "name": "jvmConsumer-message"
+    },
+    "provider": {
+        "name": "provider1"
+    },
+    "messages": [
+        {
+            "description": "Alert!",
+            "metaData": {
+                "contentType": "application/json",
+                "Content-Type": "application/json; charset=UTF-8"
+            },
+            "contents": {
+                "message": "Alert!"
+            }
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.12"
+        }
+    }
+}

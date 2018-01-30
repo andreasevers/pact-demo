@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jvmConsumer.iml" filepath="$PROJECT_DIR$/jvmConsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jvmConsumer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jvmConsumer_main.iml" group="jvmConsumer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jvmConsumer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jvmConsumer_test.iml" group="jvmConsumer" />
+    </modules>
+  </component>
+</project>

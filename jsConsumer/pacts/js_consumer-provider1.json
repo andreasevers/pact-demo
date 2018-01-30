@@ -1,0 +1,32 @@
+{
+  "consumer": {
+    "name": "JS Consumer"
+  },
+  "provider": {
+    "name": "provider1"
+  },
+  "interactions": [
+    {
+      "description": "a greeting by awd",
+      "request": {
+        "method": "GET",
+        "path": "/greetings/awd"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "salutation": "Mr.",
+          "name": "awd"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
