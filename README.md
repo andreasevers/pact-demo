@@ -3,7 +3,7 @@
 
 Demonstrates the latest ways to use pact with the JVM for both REST endpoints and events.
 
-It is initially based on [this repository ffrom shavo007](https://github.com/shavo007/pact-demo).
+It is initially based on [this repository from shavo007](https://github.com/shavo007/pact-demo).
 
 It includes a full end to end demonstration of consumer driven contract testing using pact framework.
 
