@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.4.RELEASE'
+		springBootVersion = '2.2.5.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -14,6 +14,10 @@ buildscript {
 
 plugins {
 	id "au.com.dius.pact" version "3.4.0"
+    id "com.gorylenko.gradle-git-properties" version "1.4.17"
+	id 'org.springframework.boot' version '2.2.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
 }
 
 
@@ -22,6 +26,13 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'idea'
 
+springBoot  {
+    buildInfo()
+}
+
+gitProperties {
+    gitRepositoryRoot = new File("${project.rootDir}/..")
+}
 
 jar {
 	baseName = 'pact-demo'
@@ -33,8 +44,8 @@ jar {
 
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.12
+targetCompatibility = 1.12
 
 repositories {
 	mavenCentral()
@@ -44,15 +55,18 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-actuator')
-	compile('org.projectlombok:lombok')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.boot:spring-boot-starter-amqp')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile('au.com.dius:pact-jvm-consumer-junit_2.12:3.5.12')
-    testCompile('io.rest-assured:rest-assured:3.0.0')
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation('org.springframework.boot:spring-boot-starter-actuator')
+	implementation('org.projectlombok:lombok')
+	annotationProcessor 'org.projectlombok:lombok:1.18.8'
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter-amqp')
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+    testImplementation('au.com.dius:pact-jvm-consumer-junit_2.12:3.5.12')
+    testImplementation('io.rest-assured:rest-assured:3.0.0')
 }
-
 
 eclipse {
 	classpath {
@@ -62,9 +76,8 @@ eclipse {
 }
 
 test {
-
+	useJUnitPlatform()
     systemProperties['pact.rootDir'] = "$buildDir/pacts"
-
 }
 
 pact {

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.pact.app.MessageConsumerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-30T20:06:00" hostname="ORD02107.local" time="0.044">
-  <properties/>
-  <testcase name="test" classname="com.example.pact.app.MessageConsumerTest" time="0.044"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
